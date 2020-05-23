@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ルーレット</title>
+<!-- JQuery 実装 -->
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/jQueryRotate.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/roulette.js"></script>
+<script src="js/number_choice.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div id="header">
+		<h1>ルーレット</h1>
+	</div>
+	<div id="wrapper">
+		<!-- ここから　ルーレット -->
+		<div id="roulette_container">
+			<div id="roulette_space">
+				<img id="roulette" src="image/roulette_3.png">
+				<img id="allow" src="image/allow2.png">
+			</div>
+			<div id="number_space">
+				<div id="result">NUMBER:<br><span>?</span></div>
+				<div id="red_choice" class="rhombus"><img src="image/red_choice3.png"></div>
+				<div id="black_choice" class="rhombus"><img src="image/black_choice3.png"></div>
+			</div>
+			<div id="rate_space">
+				<div class="rate">RATE:<span>xx.xx</span></div>
+				<div class="money">Money:$<span>100</span></div>
+				<p class="js-open">GO!</p>
+			</div>
+		</div>
+		<!-- ここから　数字選択 -->
+		<div class="number_area clearfix">
+		  <div class="number_wrapper fleft">
+			<!-- 1行目 -->
+			<div data-key="3" class="number number_red number_column1">
+				<nmb>3</nmb>
+			</div>
+			<div data-key="6" class="number number_black number_column1">
+				<nmb>6</nmb>
+			</div>
+			<div data-key="9" class="number number_red number_column1">
+				<nmb>9</nmb>
+			</div>
+			<div data-key="12" class="number number_red number_column1">
+				<nmb>12</nmb>
+			</div>
+			<div data-key="15" class="number number_black number_column1">
+				<nmb>15</nmb>
+			</div>
+			<div data-key="18" class="number number_red number_column1">
+				<nmb>18</nmb>
+			</div>
+			<div data-key="21" class="number number_red number_column1">
+				<nmb>21</nmb>
+			</div>
+			<div data-key="24" class="number number_black number_column1">
+				<nmb>24</nmb>
+			</div>
+			<div data-key="27" class="number number_red number_column1">
+				<nmb>27</nmb>
+			</div>
+			<div data-key="30" class="number number_red number_column1">
+				<nmb>30</nmb>
+			</div>
+			<div data-key="33" class="number number_black number_column1">
+				<nmb>33</nmb>
+			</div>
+			<div data-key="36" class="number number_red number_column1">
+				<nmb>36</nmb>
+			</div>
+			<!-- 2行目 -->
+			<div data-key="2" class="number number_black number_column2">
+				<nmb>2</nmb>
+			</div>
+			<div data-key="5" class="number number_red number_column2">
+				<nmb>5</nmb>
+			</div>
+			<div data-key="8" class="number number_black number_column2">
+				<nmb>8</nmb>
+			</div>
+			<div data-key="11" class="number number_black number_column2">
+				<nmb>11</nmb>
+			</div>
+			<div data-key="14" class="number number_red number_column2">
+				<nmb>14</nmb>
+			</div>
+			<div data-key="17" class="number number_black number_column2">
+				<nmb>17</nmb>
+			</div>
+			<div data-key="20" class="number number_black number_column2">
+				<nmb>20</nmb>
+			</div>
+			<div data-key="23" class="number number_red number_column2">
+				<nmb>23</nmb>
+			</div>
+			<div data-key="26" class="number number_black number_column2">
+				<nmb>26</nmb>
+			</div>
+			<div data-key="29" class="number number_black number_column2">
+				<nmb>29</nmb>
+			</div>
+			<div data-key="32" class="number number_red number_column2">
+				<nmb>32</nmb>
+			</div>
+			<div data-key="35" class="number number_black number_column2">
+				<nmb>35</nmb>
+			</div>
+			<!-- 3行目 -->
+			<div data-key="1" class="number number_red number_column3">
+				<nmb>1</nmb>
+			</div>
+			<div data-key="4" class="number number_black number_column3">
+				<nmb>4</nmb>
+			</div>
+			<div data-key="7" class="number number_red number_column3">
+				<nmb>7</nmb>
+			</div>
+			<div data-key="10" class="number number_black number_column3">
+				<nmb>10</nmb>
+			</div>
+			<div data-key="13" class="number number_black number_column3">
+				<nmb>13</nmb>
+			</div>
+			<div data-key="16" class="number number_red number_column3">
+				<nmb>16</nmb>
+			</div>
+			<div data-key="19" class="number number_red number_column3">
+				<nmb>19</nmb>
+			</div>
+			<div data-key="22" class="number number_black number_column3">
+				<nmb>22</nmb>
+			</div>
+			<div data-key="25" class="number number_red number_column3">
+				<nmb>25</nmb>
+			</div>
+			<div data-key="28" class="number number_black number_column3">
+				<nmb>28</nmb>
+			</div>
+			<div data-key="31" class="number number_black number_column3">
+				<nmb>31</nmb>
+			</div>
+			<div data-key="34" class="number number_red number_column3">
+				<nmb>34</nmb>
+			</div>
+		</div>
+		<input type="button" id="column1" class="btn2 fleft" value="2:1" onClick="column1()">
+		<input type="button" id="column2" class="btn2 fleft" value="2:1" onClick="column2()">
+		<input type="button" id="column3" class="btn2 fleft" value="2:1" onClick="column3()">
+	  </div>
+	</div>
+	<!-- ここから モーダルウィンドウ -->
+	<div class="modal js-modal">
+		<div class="modal_bg js-modal-close"></div>
+		<div class="modal_content">
+			<p>ルーレットを始めます</p>
+			<div class="rate">RATE:<span>xx.xx</span></div>
+			<div class="money">Money:$<span>100</span></div>
+			<div><input type="number" id="chip" min="1" required placeholder="賭ける金額"></div>
+			<input type="button" id="start" class="btn js-close" value="START" onClick="roulette_start()">
+			<input type="button" class="btn js-close" value="CANCELL">
+		</div>
+	</div>
+</body>
+</html>

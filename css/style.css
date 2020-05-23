@@ -1,0 +1,299 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #dedede;
+}
+
+#header {
+	width: 100%;
+	height: 75px;
+	text-align: center;
+}
+h1 {
+	font-size: 3em;
+	margin: 0.67em 0;
+}
+
+#wrapper {
+	width: 100%;
+}
+
+#roulette_container {
+	width: 1200px;
+	margin: 20px auto 0;
+	/* Flexboxを使って子要素を横並びにする */
+	display: flex;
+	justify-content: center;
+}
+
+#roulette_space {
+	width: 311px;
+	height: 375px;
+	margin: 0;
+	position: relative;
+}
+
+#number_space {
+	width: 311px;
+	height: 300px;
+	margin: 0;
+	padding-top: 50px;
+	text-align: center;
+}
+
+.rhombus {
+	width: 128px;
+	margin: 0 auto;
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.rhombus:hover {
+	opacity: 1;
+}
+
+#rate_space {
+	width: 311px;
+	height: 270px;
+	margin: 0;
+	background-color: #343434;
+	color: #fff;
+	border-radius: 10px;
+	padding-top: 60px;
+	text-align: left;
+}
+
+#rate_space p {
+	width: 185px;
+	background-color: #009cd3;
+	color: #fff;
+	display: block;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 50px;
+	margin: 60px auto 0 auto;
+	border: 3px solid #009cd3;
+	border-radius: 5px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#rate_space p:hover {
+	background-color: #fff;
+	color: #009cd3;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+#roulette {
+	margin-top: 54px;
+}
+
+#allow {
+   margin-left:0px;
+   position:absolute;
+   top:0%;
+   left:31.5%;
+}
+
+#testallow {
+   margin-left:-34px;
+   position:absolute;
+   top:-25px;
+   left:30%;
+}
+
+#result {
+	font-size: 32px;
+	font-weight: bold;
+}
+
+#result span{
+	font-size: 48px;
+	font-weight: bold;
+}
+
+.rate {
+	font-size: 30px;
+	font-weight: bold;
+	margin-left: 60px;
+}
+
+.money {
+	font-size: 28px;
+	font-weight: bold;
+	margin-left: 60px;
+}
+
+.number_area {
+	width: 1120px;
+	margin: 0 auto;
+}
+
+.number_wrapper {
+	width: 1050px;
+	margin: 0;
+	background-color: #333;
+	/* Flexboxを使って子要素を横並びにする */
+	display: flex;
+	flex: 1;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.number {
+	float: left;
+	border: 2px solid #ddd;
+	border-radius: 3px;
+	margin: .4rem;
+	font-size: .8rem;
+	padding: .2rem;
+	/* アニメーション速度をトランジションで定義 */
+	transition: all 0.07s;
+	width: 60px;
+	text-align: center;
+	color: #333;
+	cursor: pointer;
+}
+
+.number_red {
+	background-color: #f33;
+	color: #fff;
+}
+
+.number_black {
+	background-color: #111;
+	color: #fff;
+}
+
+.btn {
+	margin: 5px 0 0 100px;
+	padding: 5px 50px;
+}
+
+.btn2 {
+	margin: 10px 0 0 5px;
+	padding: 18px;
+}
+
+#column2 {
+	margin-top: 25px;
+}
+/* JavaScriptで変化させたchoiceクラス */
+.choice {
+	transform: scale(1.05);
+	border-color: #ffc300;
+	color: #fdf200;
+	font-weight: 700;
+	box-shadow: 0 0 10px #ffc600;
+}
+
+/* モーダルウィンドウ */
+.modal {
+	display: none;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.modal_bg {
+	background: rgba(0,0,0,0.8);
+	height: 100vh;
+	position: absolute;
+	width: 100%;
+}
+
+.modal_content{
+    background: #fff;
+    left: 50%;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+	text-align: center;
+}
+
+.modal_content .rate {
+	margin-left: 0;
+}
+
+/* 入力部分 */
+#chip{
+	width: 280px;
+	font-size: 14px;
+	padding: 10px;
+	height: 40px;
+	border-radius: 5px;
+	margin: 10px auto;
+}
+
+.modal_content .btn {
+	margin: 5px 100px 0 60px;
+}
+
+nmb {
+	display: block;
+	font-size: 36px;
+}
+
+#gameover_content h1 {
+	font-size: 100px;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	/* テキストに影を付ける */
+	text-shadow: 7px 7px 3px #000;
+	margin: 50px auto;
+}
+
+#gameover_content a {
+	width: 185px;
+	background-color: #009cd3;
+	color: #fff;
+	display: block;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 50px;
+	margin: 0 auto;
+	border: 3px solid #009cd3;
+	border-radius: 5px;
+	text-align: center;
+	text-decoration: none;
+}
+
+#gameover {
+	background-image: url("../image/gameover.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	/* 背景画像を画面中央に固定 */
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#gameover_content a:hover {
+	background-color: #fff;
+	color: #009cd3;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.fleft {
+	float: left;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
